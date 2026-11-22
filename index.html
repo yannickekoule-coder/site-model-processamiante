@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Process’Amiante — Modèle de démonstration (non publié)</title>
+  <meta name="description" content="Modèle de démonstration : conseil, assistance à maîtrise d’ouvrage, sensibilisation et formation non certifiante en amiante SS3 et SS4. Non publié.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="loader" role="status" aria-live="polite">
+    <div class="loader__inner">
+      <img class="loader__mark" src="assets/logo-mark.svg" alt="">
+      <p class="loader__title">Process’Amiante</p>
+      <div class="loader__bar" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+
+  <div id="webgl" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progress-bar"></div></div>
+
+  <header class="nav">
+    <a class="nav__brand" href="#hero">
+      <img src="assets/logo-mark.svg" width="40" height="40" alt="">
+      <span class="nav__word">
+        <strong>Process’Amiante</strong>
+        <span>Conseil amiante SS3 · SS4</span>
+      </span>
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu">
+      <span></span>
+    </button>
+    <nav class="nav__links" id="primary-nav">
+      <a href="#apropos">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav__cta" href="#contact">Demander un devis</a>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="hero__stage" id="orbit-stage" aria-hidden="true"></div>
+      <div class="hero__copy">
+        <p class="kicker">Conseil amiante SS3 · SS4</p>
+        <h1 class="hero__title">
+          <span>L’expérience</span>
+          <span>du terrain</span>
+        </h1>
+        <p class="lede">Au service de vos chantiers. Conseil, assistance à maîtrise d’ouvrage, sensibilisation et formation non certifiante.</p>
+        <div class="actions">
+          <a class="btn btn--gold" href="#contact">Demander un devis</a>
+          <a class="btn btn--ghost" href="#apropos">Découvrir</a>
+        </div>
+        <p class="demo-tag">Modèle de démonstration — non publié</p>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll <span class="scroll-cue__line"></span></div>
+    </section>
+
+    <section class="section section--left" id="apropos" data-theme="dark">
+      <div class="section__inner" data-reveal>
+        <p class="kicker">À propos</p>
+        <h2>Un appui<br>technique</h2>
+        <p class="section__text">Process’Amiante accompagne les professionnels — entreprises, maîtres d’ouvrage et collectivités — sur les opérations amiante SS3 (retrait, encapsulage) et SS4 (maintenance, entretien).</p>
+        <p class="section__text">Appui technique à l’encadrement, relecture de plan de retrait, audit avant contrôle, mode opératoire SS4 : la même exigence, du dossier jusqu’au chantier.</p>
+      </div>
+    </section>
+
+    <section class="section section--tall section--right" id="chantier" data-scene="chantier" data-theme="dark">
+      <div class="section__inner" data-reveal>
+        <p class="scene-index">01 — Chantier</p>
+        <h2>Confinement<br>et procédures</h2>
+        <p class="section__text">Avant le dépôt d’un plan de retrait, avant un contrôle ou pour cadrer une intervention SS4 : organisation du confinement, cohérence des procédures et préparation des équipes.</p>
+        <p class="section__text">L’objet que vous suivez est un caisson de confinement — le geste central d’un chantier maîtrisé.</p>
+      </div>
+    </section>
+
+    <section class="section" id="services" data-theme="dark">
+      <div class="section__inner">
+        <p class="kicker" data-reveal>Services</p>
+        <h2 data-reveal>Quatre<br>accompagnements</h2>
+        <div class="services__grid">
+          <article class="service-card" data-particles>
+            <span class="service-card__num">01</span>
+            <h3>Conseil et AMO</h3>
+            <p>Assistance à maîtrise d’ouvrage et conseil pour cadrer l’opération, les interfaces chantier et le cadre réglementaire.</p>
+            <canvas aria-hidden="true"></canvas>
+          </article>
+          <article class="service-card" data-particles>
+            <span class="service-card__num">02</span>
+            <h3>Relecture technique</h3>
+            <p>Relecture d’un plan de retrait (SS3) ou d’un mode opératoire (SS3 ou SS4) : cohérence, empoussièrement, confinement, conformité.</p>
+            <canvas aria-hidden="true"></canvas>
+          </article>
+          <article class="service-card" data-particles>
+            <span class="service-card__num">03</span>
+            <h3>Audit avant contrôle</h3>
+            <p>Audit documentaire, puis terrain si besoin, pour repérer les écarts avant une inspection.</p>
+            <canvas aria-hidden="true"></canvas>
+          </article>
+          <article class="service-card" data-particles>
+            <span class="service-card__num">04</span>
+            <h3>Sensibilisation</h3>
+            <p>Sensibilisation et formation non certifiante des équipes, et préparation aux contrôles.</p>
+            <canvas aria-hidden="true"></canvas>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tall section--left" id="transport" data-scene="transport" data-theme="dark">
+      <div class="section__inner" data-reveal>
+        <p class="scene-index">02 — Transport</p>
+        <h2>Traçabilité<br>des déchets</h2>
+        <p class="section__text">Du chantier jusqu’à la filière de traitement, l’accompagnement porte sur la cohérence des procédures, la traçabilité des déchets amiantés et le respect du cadre réglementaire.</p>
+        <p class="section__text">Process’Amiante n’assure pas le transport : le conseil vise la justesse du dossier et des bons gestes, à chaque étape.</p>
+      </div>
+    </section>
+
+    <section class="section section--tall section--right" id="traitement" data-scene="traitement" data-theme="light">
+      <div class="section__inner" data-reveal>
+        <p class="scene-index">03 — Traitement</p>
+        <h2>Jusqu’au<br>contrôle</h2>
+        <p class="section__text">Recommandations ciblées, préparation aux audits à blanc et suivi jusqu’à la réalisation du chantier. L’objectif : arriver au contrôle avec un dossier et des pratiques alignés.</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact" data-theme="dark">
+      <div class="section__inner contact__grid">
+        <div data-reveal>
+          <p class="kicker">Contact</p>
+          <h2>Demander<br>un devis</h2>
+          <p class="section__text">Vous êtes un professionnel et vous souhaitez un accompagnement SS3 ou SS4, une relecture, un audit avant contrôle ou une sensibilisation des équipes ?</p>
+          <p class="contact__meta">
+            E-mail : <a href="mailto:processamiante@gmail.com">processamiante@gmail.com</a><br>
+            Téléphone professionnel : <a href="tel:+33609361073">06 09 36 10 73</a>
+          </p>
+          <p class="form-note">Sur le site en service, un échange téléphonique n’est proposé qu’après réception de votre demande écrite.</p>
+        </div>
+        <form class="contact__form" data-reveal action="#" method="get" id="demo-form">
+          <label>Nom
+            <input type="text" name="nom" autocomplete="name">
+          </label>
+          <label>E-mail
+            <input type="email" name="mail" autocomplete="email">
+          </label>
+          <label>Prestation
+            <select name="presta">
+              <option value="">Choisir…</option>
+              <option>Relecture de plan de retrait ou de mode opératoire</option>
+              <option>Audit avant contrôle</option>
+              <option>Intervention sur chantier</option>
+              <option>Sensibilisation et formation non certifiante des équipes</option>
+              <option>Autre demande</option>
+            </select>
+          </label>
+          <label>Votre besoin
+            <textarea name="msg" rows="4"></textarea>
+          </label>
+          <button class="btn btn--gold" type="submit">Préparer ma demande</button>
+          <p class="form-note" id="form-msg">Ceci est un modèle de démonstration : le formulaire sera actif sur le site en service. Aucune donnée n’est envoyée depuis cette page.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer__logo-wrap" id="footer-logo" title="Survolez le logo">
+      <canvas id="logo-particles" width="480" height="480" aria-label="Logo Process’Amiante"></canvas>
+    </div>
+    <p class="footer__text">Conseil, assistance à maîtrise d’ouvrage, sensibilisation et formation non certifiante.</p>
+    <p class="footer__legal">
+      <strong>Modèle de démonstration — non publié.</strong>
+      Cette page n’est pas le site en service. Les mentions légales, l’identité complète et le formulaire de devis figureront sur le site une fois en ligne.
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
