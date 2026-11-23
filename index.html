@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Process’Amiante — Modèle de démonstration (non publié)</title>
-  <meta name="description" content="Modèle de démonstration : conseil, assistance à maîtrise d’ouvrage, sensibilisation et formation non certifiante en amiante SS3 et SS4. Non publié.">
+  <meta name="demo-build" content="v2-confinement">
+  <title>Process’Amiante — Modèle de démonstration (maquette 3D du confinement)</title>
+  <meta name="description" content="Modèle de démonstration : maquette 3D animée d’une zone de confinement amiante. Conseil, AMO, sensibilisation et formation non certifiante, SS3 et SS4. Non publié.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-build="v2-confinement">
   <div id="loader" role="status" aria-live="polite">
     <div class="loader__inner">
       <img class="loader__mark" src="assets/logo-mark.svg" alt="">
@@ -22,6 +23,9 @@
   </div>
 
   <div id="webgl" aria-hidden="true"></div>
+  <div id="fallback" hidden>
+    <p>La maquette 3D nécessite WebGL. Vous pouvez tout de même parcourir le contenu ci-dessous.</p>
+  </div>
   <div class="grain" aria-hidden="true"></div>
   <div class="progress" aria-hidden="true"><div class="progress__bar" id="progress-bar"></div></div>
 
@@ -37,8 +41,10 @@
       <span></span>
     </button>
     <nav class="nav__links" id="primary-nav">
-      <a href="#apropos">À propos</a>
-      <a href="#services">Services</a>
+      <a href="#ss3">SS3</a>
+      <a href="#ss4">SS4</a>
+      <a href="#formation">Formation</a>
+      <a href="#conseil">Conseil</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="nav__cta" href="#contact">Demander un devis</a>
@@ -56,78 +62,58 @@
         <p class="lede">Au service de vos chantiers. Conseil, assistance à maîtrise d’ouvrage, sensibilisation et formation non certifiante.</p>
         <div class="actions">
           <a class="btn btn--gold" href="#contact">Demander un devis</a>
-          <a class="btn btn--ghost" href="#apropos">Découvrir</a>
+          <a class="btn btn--ghost" href="#ss3">Le confinement</a>
         </div>
-        <p class="demo-tag">Modèle de démonstration — non publié</p>
+        <p class="demo-tag">Modèle de démonstration — maquette 3D du confinement — non publié</p>
       </div>
       <div class="scroll-cue" aria-hidden="true">Scroll <span class="scroll-cue__line"></span></div>
     </section>
 
-    <section class="section section--left" id="apropos" data-theme="dark">
+    <section class="section section--tall section--left" id="ss3" data-theme="dark">
+      <span class="ghost" aria-hidden="true">SS3</span>
       <div class="section__inner" data-reveal>
-        <p class="kicker">À propos</p>
-        <h2>Un appui<br>technique</h2>
-        <p class="section__text">Process’Amiante accompagne les professionnels — entreprises, maîtres d’ouvrage et collectivités — sur les opérations amiante SS3 (retrait, encapsulage) et SS4 (maintenance, entretien).</p>
-        <p class="section__text">Appui technique à l’encadrement, relecture de plan de retrait, audit avant contrôle, mode opératoire SS4 : la même exigence, du dossier jusqu’au chantier.</p>
+        <p class="scene-index">01 — SS3 · Montage</p>
+        <h2>Le cube de<br>confinement</h2>
+        <p class="section__text">Le confinement est le geste central d’un chantier de retrait (SS3) : ossature, parois en polyane, sas du personnel et sas déchets. Process’Amiante accompagne l’encadrement sur cette organisation, dès la relecture du plan de retrait.</p>
+        <p class="section__text">La maquette que vous suivez recompose le volume, module après module — comme on le prépare sur le dossier, avant le chantier.</p>
       </div>
     </section>
 
-    <section class="section section--tall section--right" id="chantier" data-scene="chantier" data-theme="dark">
+    <section class="section section--tall section--right" id="ss4" data-theme="dark">
+      <span class="ghost" aria-hidden="true">SS4</span>
       <div class="section__inner" data-reveal>
-        <p class="scene-index">01 — Chantier</p>
-        <h2>Confinement<br>et procédures</h2>
-        <p class="section__text">Avant le dépôt d’un plan de retrait, avant un contrôle ou pour cadrer une intervention SS4 : organisation du confinement, cohérence des procédures et préparation des équipes.</p>
-        <p class="section__text">L’objet que vous suivez est un caisson de confinement — le geste central d’un chantier maîtrisé.</p>
+        <p class="scene-index">02 — SS4 · Dépression</p>
+        <h2>Mise en<br>dépression</h2>
+        <p class="section__text">Extracteur, balisage, flux d’air : la mise en dépression conditionne la maîtrise des fibres, en retrait comme en maintenance (SS4). Un mode opératoire juste, et un audit avant contrôle, permettent de vérifier que le dispositif tient.</p>
+        <p class="section__text">Les particules que vous voyez schématisent l’aspiration vers l’extracteur — un principe, pas un mesurage.</p>
       </div>
     </section>
 
-    <section class="section" id="services" data-theme="dark">
-      <div class="section__inner">
-        <p class="kicker" data-reveal>Services</p>
-        <h2 data-reveal>Quatre<br>accompagnements</h2>
-        <div class="services__grid">
-          <article class="service-card" data-particles>
-            <span class="service-card__num">01</span>
-            <h3>Conseil et AMO</h3>
-            <p>Assistance à maîtrise d’ouvrage et conseil pour cadrer l’opération, les interfaces chantier et le cadre réglementaire.</p>
-            <canvas aria-hidden="true"></canvas>
-          </article>
-          <article class="service-card" data-particles>
-            <span class="service-card__num">02</span>
-            <h3>Relecture technique</h3>
-            <p>Relecture d’un plan de retrait (SS3) ou d’un mode opératoire (SS3 ou SS4) : cohérence, empoussièrement, confinement, conformité.</p>
-            <canvas aria-hidden="true"></canvas>
-          </article>
-          <article class="service-card" data-particles>
-            <span class="service-card__num">03</span>
-            <h3>Audit avant contrôle</h3>
-            <p>Audit documentaire, puis terrain si besoin, pour repérer les écarts avant une inspection.</p>
-            <canvas aria-hidden="true"></canvas>
-          </article>
-          <article class="service-card" data-particles>
-            <span class="service-card__num">04</span>
-            <h3>Sensibilisation</h3>
-            <p>Sensibilisation et formation non certifiante des équipes, et préparation aux contrôles.</p>
-            <canvas aria-hidden="true"></canvas>
-          </article>
-        </div>
+    <section class="section section--tall section--left" id="formation" data-theme="dark">
+      <span class="ghost" aria-hidden="true">RETRAIT</span>
+      <div class="section__inner" data-reveal>
+        <p class="scene-index">03 — Formation · Retrait</p>
+        <h2>À l’intérieur<br>de la zone</h2>
+        <p class="section__text">Sensibilisation et formation non certifiante des équipes aux bons gestes, à l’intérieur comme à l’extérieur de la zone confinée. L’accompagnement prépare aussi les contrôles.</p>
+        <p class="section__text">La caméra traverse le sas du personnel pour entrer dans le volume — le point de vue de ceux qui y travaillent.</p>
       </div>
     </section>
 
-    <section class="section section--tall section--left" id="transport" data-scene="transport" data-theme="dark">
+    <section class="section section--tall section--right" id="conseil" data-theme="dark">
+      <span class="ghost" aria-hidden="true">AMO</span>
       <div class="section__inner" data-reveal>
-        <p class="scene-index">02 — Transport</p>
-        <h2>Traçabilité<br>des déchets</h2>
-        <p class="section__text">Du chantier jusqu’à la filière de traitement, l’accompagnement porte sur la cohérence des procédures, la traçabilité des déchets amiantés et le respect du cadre réglementaire.</p>
-        <p class="section__text">Process’Amiante n’assure pas le transport : le conseil vise la justesse du dossier et des bons gestes, à chaque étape.</p>
+        <p class="scene-index">04 — Conseil · Déchets</p>
+        <h2>Sas déchets<br>et traçabilité</h2>
+        <p class="section__text">Conseil et assistance à maîtrise d’ouvrage sur la cohérence des procédures, le sas déchets et la traçabilité des déchets amiantés. Process’Amiante n’assure pas le transport : le conseil vise la justesse du dossier et des bons gestes.</p>
       </div>
     </section>
 
-    <section class="section section--tall section--right" id="traitement" data-scene="traitement" data-theme="light">
+    <section class="section section--tall section--left" id="restitution" data-theme="light">
+      <span class="ghost ghost--dark" aria-hidden="true">FIN</span>
       <div class="section__inner" data-reveal>
-        <p class="scene-index">03 — Traitement</p>
-        <h2>Jusqu’au<br>contrôle</h2>
-        <p class="section__text">Recommandations ciblées, préparation aux audits à blanc et suivi jusqu’à la réalisation du chantier. L’objectif : arriver au contrôle avec un dossier et des pratiques alignés.</p>
+        <p class="scene-index">05 — Restitution</p>
+        <h2>Refermer<br>le volume</h2>
+        <p class="section__text">Vue éclatée du dispositif, puis refermeture : après l’intervention, la zone est restituée. L’objectif est d’arriver au contrôle avec un dossier et des pratiques alignés.</p>
       </div>
     </section>
 
@@ -177,7 +163,7 @@
     <p class="footer__text">Conseil, assistance à maîtrise d’ouvrage, sensibilisation et formation non certifiante.</p>
     <p class="footer__legal">
       <strong>Modèle de démonstration — non publié.</strong>
-      Cette page n’est pas le site en service. Les mentions légales, l’identité complète et le formulaire de devis figureront sur le site une fois en ligne.
+      Cette page n’est pas le site officiel. Les mentions légales, l’identité complète et le formulaire de devis figureront sur le site une fois en ligne.
     </p>
   </footer>
 

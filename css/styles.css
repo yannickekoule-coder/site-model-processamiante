@@ -768,3 +768,64 @@ body.theme-light .contact__form {
     animation: none;
   }
 }
+
+/* ---------- v2 confinement ---------- */
+
+#fallback {
+  position: fixed;
+  top: calc(var(--nav-h) + 0.6rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 25;
+  max-width: 36rem;
+  padding: 0.7rem 1rem;
+  background: rgba(7, 8, 9, 0.88);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+#fallback[hidden] { display: none; }
+
+.ghost {
+  position: absolute;
+  right: 4vw;
+  top: 18vh;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(6rem, 22vw, 18rem);
+  line-height: 0.8;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(243, 242, 238, 0.07);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.ghost--dark {
+  -webkit-text-stroke: 1px rgba(20, 23, 27, 0.1);
+}
+
+.section__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.nav__links {
+  gap: 1.25rem;
+}
+
+@media (max-width: 1080px) and (min-width: 861px) {
+  .nav__links {
+    gap: 0.85rem;
+  }
+  .nav__links a {
+    letter-spacing: 0.12em;
+    font-size: 0.74rem;
+  }
+  .nav__word span { display: none; }
+}
